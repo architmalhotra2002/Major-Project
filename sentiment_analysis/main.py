@@ -1,19 +1,19 @@
 import json
-from yt_extractor import get_video_infos, get_audio_url
+from yt_extractor import get_video_info, get_audio_url
 from api import save_transcript
 
-def save_video_sentiments(url):
-    video_infos = get_video_infos(audio_url)
-    audio_url = get_audio_url(video_infos)
 
+def save_video_sentiments(url):
+    video_info = get_video_info(url)
+    url = get_audio_url(video_info)
     if url:
-        title = video_infos['title']
+        title = video_info['title']
         title = title.strip().replace(" ", "_")
         title = "data/" + title
         save_transcript(url, title, sentiment_analysis=True)
 
 if __name__ == "__main__":
-    # save_video_sentiments("https://www.youtube.com/watch?v=e-kSGNzu0hM")
+    save_video_sentiments("https://youtu.be/e-kSGNzu0hM")
     
     with open("data/iPhone_13_Review:_Pros_and_Cons_sentiments.json", "r") as f:
         data = json.load(f)
@@ -34,10 +34,10 @@ if __name__ == "__main__":
     n_neg  = len(negatives)
     n_neut = len(neutrals)
 
-    print("Num positives : ", n_pos)
-    print("Num negatives : ", n_neg)
-    print("Num neutrals  : ", n_neut)
+    print("Num positives:", n_pos)
+    print("Num negatives:", n_neg)
+    print("Num neutrals:", n_neut)
 
     # ignore neutrals here
     r = n_pos / (n_pos + n_neg)
-    print(f"Positive ratio : {r:.3f}")
+    print(f"Positive ratio: {r:.3f}")
