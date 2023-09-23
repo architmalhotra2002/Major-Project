@@ -1,12 +1,16 @@
 import numpy as np
 import nltk
 from nltk.stem.porter import PorterStemmer
-
-nltk.download('punkt')
+import nltk.data
+from nltk.tokenize import RegexpTokenizer
 
 Stemmer = PorterStemmer()
+
+tokenizer = RegexpTokenizer(r'\w+')
+
 def tokenize(sentence):
-    return nltk.word_tokenize(sentence)
+    return tokenizer.tokenize(sentence)
+
 
 def stem(word):
     return Stemmer.stem(word.lower())
