@@ -23,4 +23,4 @@ def bag_of_words(tokenized_sentence,words):
         if w in sentence_word:
             bag[idx] = 1
         
-        return bag
+    return bag
