@@ -1,31 +1,62 @@
 {
+   "intents": [
+      {
+         "tag": "greeting",
+         "patterns": [
+            "hello",
+            "hii",
+            "wake up",
+            "jarvis"
+         ],
+         "responses": [
+            "Hello Sir",
+            "How are You Sir.",
+            "Always for you Sir.",
+            "Hello",
+            "Here's your Assistant"
+         ]
+      },
+      {
+         "tag": "Bye",
+         "patterns": [
+            "bye",
+            "good bye",
+            "see you later",
+            "sleep",
+            "exit"
+         ],
+         "responses": [
+            "Bye",
+            "I am Going",
+            "Always for you Sir.",
+            "See You later",
+            "Good Bye",
+            "It'll be Nice to meet You Again.",
+            "See You Again"
+         ]
+      },
+      {
+         "tag": "health",
+         "patterns": [
+            "how are you",
+            "how you",
+            "sare you fine?",
+            "are you good"
+         ],
+         "responses": [
+            "Fine",
+            "Perfect",
+            "Cool.",
+            "Cool.",
+            "Like You.",
+            "Are you fine?",
+            "I am fine"
+         ]
+      },
 
-     "intents" : [
+     
+        
 
-
-     {
-        "tag" :"greeting",
-        "patterns":["hello","hii","wake up","jarvis"
-
-        ],
-        "responses":["Hello Sir" , "How are You Sir.","Always for you Sir.","Hello","Here's your Assistant"
-
-        ]
-
-
-     },
-     {
-        "tag" :"Bye",
-        "patterns":["bye","good bye","see you later","sleep","exit"
-
-        ],
-        "responses":["Bye" , "I am Going","Always for you Sir.","See You later","Good Bye","It'll be Nice to meet You Again.","See You Again"
-
-        ]
-
-
-     }
-    ,
      
      {
         "tag" :"Identity",
