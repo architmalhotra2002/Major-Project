@@ -1,7 +1,5 @@
 import numpy as np
-import nltk
 from nltk.stem.porter import PorterStemmer
-import nltk.data
 from nltk.tokenize import RegexpTokenizer
 
 Stemmer = PorterStemmer()

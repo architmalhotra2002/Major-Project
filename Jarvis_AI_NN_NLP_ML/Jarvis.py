@@ -3,6 +3,8 @@ import json
 import torch
 from Brain import NeuralNet
 from NeuralNetwork import bag_of_words,tokenize
+from Task import NonInputExecution
+from Task import Input_Execution
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 with open("intents.json","r") as json_data:
     intents = json.load(json_data)
@@ -28,10 +30,10 @@ from speak import Say
 
 def Main():
     sentence = Listen()
+    result =str(sentence)
 
     if sentence =="bye":
         exit()
-
     sentence = tokenize(sentence)
     X = bag_of_words(sentence,all_words)
     X = X.reshape(1,X.shape[0])
@@ -45,13 +47,22 @@ def Main():
 
     if prob.item() > 0.75:
         for intent in intents['intents']:
-            if tag == intent['tag']:
-                reply = random.choice(intent['responses'])
-                Say(reply)
-    
-
+            if tag == intent["tag"]:
+                reply = random.choice(intent["responses"])
+                if "time" in reply:
+                     NonInputExecution(reply)
+                elif "date" in reply:
+                     NonInputExecution(reply)
+                elif "wikipedia" in reply:
+                     Input_Execution(reply,result)
+                elif "google" in reply:
+                     Input_Execution(reply,result)
+                
+                
+                else:
+                   Say(reply)
 while(True):
-    Main()
+        Main()
 
 
 

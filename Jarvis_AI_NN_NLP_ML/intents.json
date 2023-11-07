@@ -26,18 +26,7 @@
 
      }
     ,
-     {
-        "tag" :"health",
-        "patterns":["how are you","how you","sare you fine?","are you good"
-
-        ],
-        "responses":["Fine" , "Perfect","Cool.","Cool.","Like You.","Are you fine?","I am fine"
-
-        ]
-
-
-     }
-     ,
+     
      {
         "tag" :"Identity",
         "patterns":["Your Name","What is your name?","Who are you?","What are you"
@@ -48,65 +37,50 @@
         ]
 
 
+     },
+     {
+      "tag" :"time",
+        "patterns":["What is time","What's the time","samay","time"
+
+        ],
+        "responses":["time" 
+
+        ]
+      
      }
-     ,  
+     ,
      {
-      "tag": "investment_strategies",
-      "patterns": [
-         "What are some investment strategies for beginners?",
-         "Give me advice on long-term investing.",
-         "Tell me about diversification."
-      ],
-      "responses": [
-         "Investment strategies for beginners include dollar-cost averaging, buy-and-hold, and investing in diversified portfolios.",
-         "Long-term investing involves holding onto investments for an extended period to benefit from potential growth.",
-         "Diversification is a strategy that involves spreading investments across different asset classes to reduce risk."
-      ]
-   }
+      "tag" :"date",
+        "patterns":["What is date?","What's the date","tareek","date"
+
+        ],
+        "responses":["date" 
+
+        ]
+      
+     }
+     ,
+     {
+      "tag" :"day",
+        "patterns":["What is day?","What's the day","din","day"
+
+        ],
+        "responses":["day" 
+
+        ]
+      
+     }
+     ,
+     {
+      "tag":"wikipedia",
+      "patterns":["Who is","about","what is","wikipedia"],
+   "responses":["wikipedia"] }
+
    ,
-      {
-         "tag": "market_indices",
-         "patterns": [
-            "How is the S&P 500 doing today?",
-            "What's the performance of the NASDAQ?",
-            "Tell me about the Dow Jones Industrial Average."
-         ],
-         "responses": [
-            "The S&P 500 is currently [up/down] [percentage] today.",
-            "The NASDAQ is [up/down] [percentage] today.",
-            "The Dow Jones Industrial Average is [up/down] [percentage] today."
-         ]
-      }
-
-      ,
-      {
-         "tag": "stock_prices",
-         "patterns": [
-            "What's the current price of Amazon stock?",
-            "Can you give me the price of Apple stock?",
-            "Tell me the price of Microsoft stock."
-         ],
-         "responses": [
-            "The current price of Amazon stock is [current price].",
-            "Apple stock is currently priced at [current price].",
-            "The price of Microsoft stock is [current price]."
-         ]
-      }
-      ,
-
-     {
-         "tag": "stock_market_overview",
-         "patterns": [
-            "Tell me about the stock market",
-            "What's happening in the stock market?",
-            "Give me a stock market update"
-         ],
-         "responses": [
-            "The stock market is a dynamic marketplace where investors buy and sell shares of publicly-traded companies. It's influenced by various factors like economic news, company earnings, and investor sentiment.",
-            "Sure, the stock market is constantly changing. I can provide you with the latest stock market update if you'd like.",
-            "The stock market is a complex system of buying and selling stocks. I can provide you with the latest news and updates about it."
-         ]
-      }
+   {
+      "tag":"google",
+      "patterns":["google search","google","search"],
+   "responses":["google"] }
       
 
  
