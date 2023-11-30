@@ -17,5 +17,5 @@ def Listen():
         return ""
     
     query = str(query)
-    return query.lower()
+    return query
 

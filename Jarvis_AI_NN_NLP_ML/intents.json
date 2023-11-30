@@ -79,17 +79,7 @@
         ]
       
      }
-     ,
-     {
-      "tag" :"date",
-        "patterns":["What is date?","What's the date","tareek","date"
-
-        ],
-        "responses":["date" 
-
-        ]
-      
-     }
+     
      ,
      {
       "tag" :"day",
