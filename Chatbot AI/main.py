@@ -4,11 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 import yfinance as yf 
-import os
-from dotenv.main import load_dotenv
-load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
+openai.api_key = open('API_KEY.txt','r').read()
 def get_stock_price(ticker):
     return str(yf.Ticker(ticker).history(period='1y').iloc[-1].Close)
 
